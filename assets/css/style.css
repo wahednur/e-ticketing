@@ -11,7 +11,7 @@ body {
 .header {
 }
 .container {
-  width: 1170px;
+  width: 1170px !important;
 }
 .header-banner {
   border-radius: 32px;
@@ -93,8 +93,11 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  transition: all ease-in-out 300ms;
 }
-
+.btn:hover {
+  background-color: #54ff39;
+}
 .be-fe-item {
   width: 308px !important;
   height: 138px;
@@ -123,4 +126,127 @@ body {
 .be-fe-area {
   width: calc(100% - 200px);
   left: 100px;
+}
+.offer-item {
+  border-radius: 24px;
+  position: relative;
+}
+.coupon-code,
+.coupon-des {
+  padding: 52px;
+}
+.bg-yellow {
+  background-color: #ffbf0f;
+}
+.coupon-des {
+  width: 70%;
+  height: 220px;
+  border-right: 1px dashed var(--base-white);
+}
+.coupon-des::after,
+.coupon-des::before {
+  content: "";
+  width: 48px;
+  height: 48px;
+  background-color: var(--base-white);
+  position: absolute;
+  border-radius: 48px;
+  right: 34%;
+}
+.coupon-des::after {
+  top: -24px;
+}
+.coupon-des::before {
+  bottom: -24px;
+}
+.coupon-des h1 {
+  color: rgba(3, 7, 18, 0.8);
+  font-family: Inter;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 36px;
+}
+.c-des {
+  color: rgba(3, 7, 18, 0.8);
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px;
+}
+.c-date {
+  color: rgba(3, 7, 18, 0.5);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+}
+.coupon {
+  color: var(--primary-color);
+  text-align: center;
+  font-family: Raleway;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 180%;
+}
+.c-code {
+  color: rgba(3, 7, 18, 0.4);
+  font-family: Raleway;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 180%;
+}
+.coupon-grp {
+  height: 220px;
+}
+.offer-item .fx {
+  height: 220px !important;
+}
+.s-btn {
+  padding: 21px 30px;
+  border-radius: 12px;
+  border: 1px solid var(--green-color);
+  color: var(--primary-700, #1dd100);
+  text-align: center;
+  font-family: Raleway;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.sw-paribahan-sec {
+  border-radius: 88px 88px 0px 0px;
+  border-top: 2px solid var(--green-color);
+  background: #f7f8f8;
+  margin-top: 120px;
+}
+section {
+  display: block;
+  float: left;
+  width: 100%;
+}
+.sw-title-area h1 {
+  color: var(--primary-color);
+  text-align: center;
+  font-family: Raleway;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.sw-title-area p {
+  color: rgba(3, 7, 18, 0.6);
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 166.667% */
+}
+.sw-title-des {
 }
