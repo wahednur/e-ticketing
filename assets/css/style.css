@@ -97,6 +97,7 @@ body {
 }
 .btn:hover {
   background-color: #54ff39;
+  color: var(--base-white);
 }
 .fe-item {
   width: 308px !important;
@@ -190,6 +191,7 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: 180%;
+  text-transform: uppercase;
 }
 .c-code {
   color: rgba(3, 7, 18, 0.4);
@@ -422,4 +424,66 @@ tr {
 .cart-status {
   border-radius: 12px;
   background: #f7f8f8;
+}
+.coupe-apply {
+  background-color: var(--base-white);
+  padding: 10px;
+  border-radius: 10px;
+}
+.coupe-apply input::placeholder {
+  padding: 10px;
+}
+
+.coupe-apply input {
+  border-radius: 8px;
+  outline: none;
+}
+.cust-input-grp {
+  margin-top: 24px;
+}
+.cust-input-grp input {
+  border-radius: 12px;
+  border: 1px solid rgba(3, 7, 18, 0.1);
+  width: 100%;
+  height: 64px;
+  padding: 15px;
+  outline: none;
+}
+.page-link a {
+  color: rgba(3, 7, 18, 0.6);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+  transition: all ease-in-out 300ms;
+}
+.page-link a:hover {
+  color: #1dd100;
+}
+footer {
+  background-color: var(--primary-color);
+  float: left;
+  display: block;
+  width: 100%;
+  color: var(--base-white);
+  margin-top: 120px;
+}
+footer .fo-item h4 {
+  color: var(--base-white);
+  font-family: Raleway;
+  font-size: 36px;
+  font-weight: 800;
+}
+.fo-item h5 {
+  color: var(--base-white);
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 20px;
+}
+.fo-menu a:hover {
+  color: var(--green-color);
+  transition: all ease-in-out 300ms;
 }
