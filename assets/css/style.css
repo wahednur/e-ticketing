@@ -98,14 +98,14 @@ body {
 .btn:hover {
   background-color: #54ff39;
 }
-.be-fe-item {
+.fe-item {
   width: 308px !important;
   height: 138px;
   border-radius: 24px;
   border-bottom: 3px solid var(--green-color);
   background: var(--base-white);
 }
-.ba-text-cont h2 {
+.fe-item-text h1 {
   color: var(--primary-color);
   text-align: center;
   font-family: Inter;
@@ -129,7 +129,6 @@ body {
 }
 .offer-item {
   border-radius: 24px;
-  position: relative;
 }
 .coupon-code,
 .coupon-des {
@@ -139,9 +138,9 @@ body {
   background-color: #ffbf0f;
 }
 .coupon-des {
-  width: 70%;
   height: 220px;
   border-right: 1px dashed var(--base-white);
+  position: relative;
 }
 .coupon-des::after,
 .coupon-des::before {
@@ -151,7 +150,7 @@ body {
   background-color: var(--base-white);
   position: absolute;
   border-radius: 48px;
-  right: 34%;
+  right: -24px;
 }
 .coupon-des::after {
   top: -24px;
@@ -249,4 +248,111 @@ section {
   line-height: 30px; /* 166.667% */
 }
 .sw-title-des {
+}
+.bus-info-sec {
+  background-color: var(--base-white);
+  padding: 32px;
+  border-radius: 24px;
+}
+.businfo {
+  border-right: 1px dashed var(--green-color);
+}
+.booking-bus-name {
+  color: var(--primary-color);
+  text-align: center;
+  font-family: Raleway;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.sets-status {
+  padding: 17px;
+  color: var(--green-color);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 180px;
+  height: 56px;
+  border-radius: 12px;
+  background: rgba(29, 209, 0, 0.15);
+}
+.bus-destination {
+  width: 808px;
+  border-radius: 24px;
+  background: #f7f8f8;
+  padding: 32px;
+  margin-top: 24px;
+}
+.bus-destination p {
+  color: rgba(3, 7, 18, 0.6);
+  font-family: Raleway;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.bus-destination .row {
+  border-bottom: 1px dashed #03071299;
+}
+.bus-destination .row:last-child {
+  border: none;
+}
+.bus-destination .drop-point p {
+  color: rgba(3, 7, 18, 0.8);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.last-row {
+}
+.ticket-fare {
+  color: var(--base-black, #030712);
+  text-align: center;
+  font-family: Raleway;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 125% */
+}
+.seat-map {
+  border-right: 1px dashed var(--green-color);
+  padding-right: 24px;
+}
+.seat-map h4 {
+  color: var(--primary-color);
+  font-family: Raleway;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+.seat-map .b-border {
+  padding: 20px 0;
+  border-top: 1px dashed #cccdcf;
+  border-bottom: 1px dashed #cccdcf;
+}
+.seat-status p {
+  color: var(--green-color);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.wheel-btn,
+.seat-disable {
+  border-radius: 12px;
+  background: rgba(3, 7, 18, 0.1);
+  width: 110px;
+  height: 56px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
