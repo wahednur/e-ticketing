@@ -356,3 +356,22 @@ section {
   justify-content: center;
   align-items: center;
 }
+.seat-plane {
+  display: grid;
+  grid-template-columns: 55px repeat(4, 1fr);
+  width: 100%;
+  gap: 32px;
+}
+.seat {
+  border-radius: 12px;
+  background: #f7f8f8;
+  height: 56px;
+  transition: all ease-in-out 300ms;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+}
+.seat:hover {
+  background: var(--green-color);
+  color: var(--base-white);
+}
