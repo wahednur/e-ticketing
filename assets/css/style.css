@@ -323,7 +323,8 @@ section {
   border-right: 1px dashed var(--green-color);
   padding-right: 24px;
 }
-.seat-map h4 {
+.seat-map h4,
+.cart-info-title {
   color: var(--primary-color);
   font-family: Raleway;
   font-size: 24px;
@@ -374,4 +375,51 @@ section {
 .seat:hover {
   background: var(--green-color);
   color: var(--base-white);
+}
+.cart {
+  padding-left: 20px;
+}
+.cart-info-title {
+}
+.select-seat {
+  background: var(--green-color);
+  padding: 5px 10px;
+  border-radius: 12px;
+  color: var(--base-white);
+}
+.t-price {
+  color: var(--base-black, #030712);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+tbody {
+  border-top: 1px dashed #cccdcf;
+}
+
+tr:nth-last-child(2) {
+  border-bottom: 1px solid #cccdcf;
+}
+tr:nth-last-child(3) {
+  border-bottom: 1px solid #cccdcf;
+}
+tr {
+  padding: 10px !important;
+  display: block;
+  width: 100%;
+}
+.cpn-btn {
+  width: 80px;
+  height: 40px;
+  flex-shrink: 0;
+  background-color: var(--green-color);
+  border-radius: 8px;
+  height: 40px;
+}
+
+.cart-status {
+  border-radius: 12px;
+  background: #f7f8f8;
 }
