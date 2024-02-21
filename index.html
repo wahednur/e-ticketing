@@ -4,12 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>e-Ticketing</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <!-- Header section start  -->
-    <header>
+    <header class="mt-8">
       <div class="header container mx-auto">
         <!-- Header top start  -->
         <div class="header-top">
@@ -25,8 +29,8 @@
                 <li><a href="#">Search</a></li>
               </ul>
             </div>
-            <div class="bus-logo">
-              <a class="flex gap-[10px] items-center" href="#"
+            <div class="bus-logo flex justify-center items-center">
+              <a class="flex gap-[10px] items-center bus-btn" href="#"
                 >Bus <img src="assets/images/bus-icon.png" alt=""
               /></a>
             </div>
@@ -49,7 +53,7 @@
                 the app. The integrated testing features allow for a streamlined
                 .
               </p>
-              <a class="btn" href="#sw-paribahan">Buy Tickets</a>
+              <a class="btn scroll-smooth" href="#sw-paribahan">Buy Tickets</a>
               <div
                 class="be-fe-area flex justify-center gap-[23px] absolute -bottom-[61px]"
               >
@@ -161,7 +165,10 @@
               <div class="bus-seats">
                 <div class="sets-status flex gap-3">
                   <img src="assets/images/seat-green.png" alt="" />
-                  <p><span class="availabe-seat">40 </span>Seats left</p>
+                  <p>
+                    <span id="available-seats" class="available-seats">40 </span
+                    >Seats left
+                  </p>
                 </div>
               </div>
               <div class="bus-destination pb-8">
@@ -194,7 +201,9 @@
               class="ticket-price flex flex-col justify-center items-center h-full"
             >
               <img class="w-12" src="assets/images/fare.png" alt="" />
-              <h2 class="ticket-fare"><span>550</span> Taka</h2>
+              <h2 id="ticket-fare" class="ticket-fare">
+                <span>550</span> Taka
+              </h2>
               <p>Per Seat</p>
             </div>
           </div>
@@ -225,7 +234,7 @@
             <div class="row w-full float-start">
               <div class="seat-plane mt-5">
                 <span class="p-5 text-lg font-bold">A</span>
-                <button class="seat">A1</button>
+                <button class="seat selected">A1</button>
                 <button class="seat">A2</button>
                 <button class="seat">A3</button>
                 <button class="seat">A4</button>
@@ -287,13 +296,13 @@
                 <thead>
                   <tr class="w-full flex justify-between text-left">
                     <th class="text-left">
-                      Seat <span class="select-seat">2</span>
+                      Seat <span id="cart-count" class="select-seat">2</span>
                     </th>
                     <th class="text-left">Class</th>
                     <th class="text-right">Price</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody id="selected-tbl-row" class="selected-seat-status">
                   <tr class="flex justify-between w-full">
                     <th class="text-left">A1</th>
                     <th class="text-left">Economy</th>
@@ -306,23 +315,30 @@
                   </tr>
                   <tr class="t-price flex w-full justify-between">
                     <td colspan="2">Total Price</td>
-                    <td class="text-right"><span>1100</span> BDT</td>
+                    <td class="text-right">
+                      <span id="total-taka" class="taka">0</span> BDT
+                    </td>
                   </tr>
-                  <tr class="flex justify-between w-full">
+                  <tr id="hide-tr" class="flex justify-between w-full">
                     <td class="collapse-2">
                       Discount <span class="dis-per">20%</span>
                     </td>
-                    <td class="t-price"><span>- 220 </span>BDT</td>
+                    <td class="t-price"><span id="d-price">0</span>BDT</td>
                   </tr>
-                  <tr class="flex justify-between w-full">
+                  <tr id="hdide-tr" class="flex justify-between w-full">
                     <td colspan="collapse-2" class="t-price">Grand Total</td>
-                    <td class="t-price"><span>880 </span>BDT</td>
+                    <td class="g-price"><span id="g-price">880 </span>BDT</td>
                   </tr>
                 </tbody>
               </table>
               <div class="coupe-apply">
                 <div class="inp-grp flex justify-between">
-                  <input type="text" placeholder="Have any copupon?" />
+                  <input
+                    id="couponInp"
+                    type="text"
+                    value="New15"
+                    placeholder="Have any copupon?"
+                  />
                   <button class="cpn-btn">Apply</button>
                 </div>
               </div>
@@ -351,7 +367,7 @@
                 />
               </div>
             </div>
-            <button class="btn w-full mt-6">next</button>
+            <button id="next-btn" class="btn w-full mt-6">Next</button>
             <div class="page-link flex justify-around mt-6">
               <a href="#" class="terms">Terms and Conditions</a>
               <a href="#" class="terms">Cancellation Policy</a>

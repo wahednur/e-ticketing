@@ -52,6 +52,12 @@ body {
 .bus-logo a {
   height: 56px;
 }
+.bus-btn {
+  border-radius: 12px;
+  border: 1px solid rgba(29, 209, 0, 0.4);
+  background: rgba(29, 209, 0, 0.1);
+  padding: 16px 30px;
+}
 .travl-name {
   color: var(--base-white);
   text-align: center;
@@ -98,6 +104,10 @@ body {
 .btn:hover {
   background-color: #54ff39;
   color: var(--base-white);
+}
+.scroll-smooth {
+  scroll-behavior: smooth;
+  transition: all ease-in-out 500ms;
 }
 .fe-item {
   width: 308px !important;
@@ -242,7 +252,6 @@ section {
 .sw-title-area p {
   color: rgba(3, 7, 18, 0.6);
   text-align: center;
-  font-feature-settings: "clig" off, "liga" off;
   font-family: Inter;
   font-size: 18px;
   font-style: normal;
@@ -258,6 +267,9 @@ section {
 }
 .businfo {
   border-right: 1px dashed var(--green-color);
+}
+#couponInp {
+  text-transform: uppercase;
 }
 .booking-bus-name {
   color: var(--primary-color);
@@ -374,7 +386,8 @@ section {
   font-size: 18px;
   font-weight: 500;
 }
-.seat:hover {
+.seat:hover,
+.seat.selected {
   background: var(--green-color);
   color: var(--base-white);
 }
@@ -389,7 +402,8 @@ section {
   border-radius: 12px;
   color: var(--base-white);
 }
-.t-price {
+.t-price,
+.g-price {
   color: var(--base-black, #030712);
   font-family: Inter;
   font-size: 16px;
@@ -401,10 +415,13 @@ tbody {
   border-top: 1px dashed #cccdcf;
 }
 
-tr:nth-last-child(2) {
+tr.t-price {
   border-bottom: 1px solid #cccdcf;
 }
-tr:nth-last-child(3) {
+tr#hide-tr {
+  border-bottom: 1px solid #cccdcf;
+}
+tr#hdide-tr {
   border-bottom: 1px solid #cccdcf;
 }
 tr {
