@@ -12,7 +12,6 @@ for (const seat of allSeats) {
     const seatClass = String("Economy");
     const bdt = String(" ৳");
     const ticketPrice = getTicketPrice;
-    console.log(seat.innerText);
 
     const tblRow = document.createElement("tr");
     tblRow.classList.add("flex", "justify-between", "w-full");
@@ -35,6 +34,13 @@ for (const seat of allSeats) {
 
     updateTotalPrice(ticketPrice);
     grandTotalPrice();
+
+    const cartCount = convertValueById("cart-count");
+    if (cartCount < 4) {
+      document.getElementById("cart-count").innerText = cartCount + 1;
+    } else {
+      alert("Your Seat limit exist");
+    }
   });
 }
 
