@@ -12,10 +12,10 @@ for (const seat of allSeats) {
     const seatClass = String("Economy");
     const bdt = String(" ৳");
     const ticketPrice = getTicketPrice;
+    const selectTblRow = document.getElementById("selected-tbl-row");
 
     const tblRow = document.createElement("tr");
     tblRow.classList.add("flex", "justify-between", "w-full");
-    const selectTblRow = document.getElementById("selected-tbl-row");
     const th1 = document.createElement("th");
     const th2 = document.createElement("th");
     const th3 = document.createElement("th");
@@ -26,11 +26,11 @@ for (const seat of allSeats) {
     th3.innerText = ticketPrice;
 
     span.innerText = bdt;
+    selectTblRow.appendChild(tblRow);
     tblRow.appendChild(th1);
     tblRow.appendChild(th2);
     tblRow.appendChild(th3);
     th3.appendChild(span);
-    selectTblRow.appendChild(tblRow);
 
     updateTotalPrice(ticketPrice);
     grandTotalPrice();
@@ -56,15 +56,19 @@ function updateTotalPrice(value) {
 }
 // Summetion of total cart price
 function grandTotalPrice(status) {
-  // const discountPrice = convertValueById("d-price");
-  const couponCode = document.getElementById("couponInp").value;
-  if (couponCode == "NEW15") {
-    const totalPrice = convertValueById("total-taka");
-    const discountPrice = totalPrice * 0.15;
-    const grand = totalPrice - discountPrice;
-    document.getElementById("d-price").innerText = discountPrice;
-    document.getElementById("g-price").innerText = grand;
-    return grand;
+  const totalPrice = convertValueById("total-taka");
+  if (status == undefined) {
+    document.getElementById("g-price").innerText = totalPrice;
+  } else {
+    const couponCode = document.getElementById("couponInp").value;
+
+    if (couponCode == "NEW15") {
+      const discount = totalPrice * 0.15;
+      document.getElementById("d-price").innerText = discount;
+      document.getElementById("g-price").innerText = totalPrice - discount;
+    } else {
+      alert("You enter invalid coupon code");
+    }
   }
 }
 // update Cart
@@ -72,18 +76,18 @@ function updateCart() {}
 // Update Seats
 function updateSeats() {}
 
-function hideTableRow() {
-  const discoutnPrice = convertValueById("d-price");
-  if (discoutnPrice <= 0) {
-    document.getElementById("hdide-tr").classList.add("hidden");
-    document.getElementById("hide-tr").classList.add("hidden");
-    document.querySelector("tr#hide-tr").style.border = "none";
-    document.querySelector("tr.t-price").style.border = "none";
-    document.querySelector("tr.t-price").style.border = "none";
-    document.querySelector("tr.t-price").style.marginBottom = "20px";
-  }
-}
-hideTableRow();
+// function hideTableRow() {
+//   const discoutnPrice = convertValueById("d-price");
+//   if (discoutnPrice <= 0) {
+//     document.getElementById("hdide-tr").classList.add("hidden");
+//     document.getElementById("hide-tr").classList.add("hidden");
+//     document.querySelector("tr#hide-tr").style.border = "none";
+//     document.querySelector("tr.t-price").style.border = "none";
+//     document.querySelector("tr.t-price").style.border = "none";
+//     document.querySelector("tr.t-price").style.marginBottom = "20px";
+//   }
+// }
+// hideTableRow();
 
 // Convert string to integer value
 function convertValueById(id) {

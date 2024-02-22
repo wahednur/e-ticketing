@@ -302,7 +302,8 @@
                     <th class="text-right">Price</th>
                   </tr>
                 </thead>
-                <tbody id="selected-tbl-row" class="selected-seat-status">
+                <tbody class="selected-seat-status">
+                  <tr id="selected-tbl-row"></tr>
                   <tr class="t-price flex w-full justify-between">
                     <td colspan="2">Total Price</td>
                     <td class="text-right">
@@ -311,7 +312,7 @@
                   </tr>
                   <tr id="hide-tr" class="flex justify-between w-full">
                     <td class="collapse-2">
-                      Discount <span class="dis-per">20%</span>
+                      Discount <span class="dis-per"></span>
                     </td>
                     <td class="t-price"><span id="d-price">0</span>BDT</td>
                   </tr>
@@ -326,7 +327,7 @@
                   <input
                     id="couponInp"
                     type="text"
-                    value="New15"
+                    value=""
                     placeholder="Have any copupon?"
                   />
                   <button
