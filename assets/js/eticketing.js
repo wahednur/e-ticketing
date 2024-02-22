@@ -25,17 +25,14 @@ for (const seat of allSeats) {
     th3.innerText = ticketPrice;
 
     span.innerText = bdt;
-    selectTblRow.appendChild(tblRow);
     tblRow.appendChild(th1);
     tblRow.appendChild(th2);
     tblRow.appendChild(th3);
     th3.appendChild(span);
 
-    updateTotalPrice(ticketPrice);
-    grandTotalPrice();
-
     const cartCount = convertValueById("cart-count");
     if (cartCount < 4) {
+      selectTblRow.appendChild(tblRow);
       document.getElementById("cart-count").innerText = cartCount + 1;
       seat.classList.toggle("selected");
     } else {
@@ -43,16 +40,20 @@ for (const seat of allSeats) {
     }
     const leftSeat = convertValueById("available-seats");
     document.getElementById("available-seats").innerText = leftSeat - 1;
+    updateTotalPrice(ticketPrice);
+    grandTotalPrice();
   });
 }
 
 // Update Total price price
 function updateTotalPrice(value) {
   const totalPrice = convertValueById("total-taka");
-
-  const sum = totalPrice + parseInt(value);
-  document.getElementById("total-taka").innerText = sum;
-  return totalPrice;
+  const cartCount = convertValueById("cart-count");
+  if (cartCount < 4) {
+    const sum = totalPrice + parseInt(value);
+    document.getElementById("total-taka").innerText = sum;
+    return totalPrice;
+  }
 }
 // Summetion of total cart price
 function grandTotalPrice(status) {
