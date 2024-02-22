@@ -7,7 +7,6 @@ const getTicketPrice = convertValueById("ticket-fare");
 
 for (const seat of allSeats) {
   seat.addEventListener("click", function (event) {
-    seat.classList.toggle("selected");
     const seatName = seat.innerText;
     const seatClass = String("Economy");
     const bdt = String(" ৳");
@@ -38,6 +37,7 @@ for (const seat of allSeats) {
     const cartCount = convertValueById("cart-count");
     if (cartCount < 4) {
       document.getElementById("cart-count").innerText = cartCount + 1;
+      seat.classList.toggle("selected");
     } else {
       alert("Your Seat limit exist");
     }
