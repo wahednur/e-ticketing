@@ -41,6 +41,8 @@ for (const seat of allSeats) {
     } else {
       alert("Your Seat limit exist");
     }
+    const leftSeat = convertValueById("available-seats");
+    document.getElementById("available-seats").innerText = leftSeat - 1;
   });
 }
 
@@ -53,7 +55,7 @@ function updateTotalPrice(value) {
   return totalPrice;
 }
 // Summetion of total cart price
-function grandTotalPrice() {
+function grandTotalPrice(status) {
   // const discountPrice = convertValueById("d-price");
   const couponCode = document.getElementById("couponInp").value;
   if (couponCode == "NEW15") {
