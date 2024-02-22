@@ -66,6 +66,10 @@ function grandTotalPrice(status) {
       const discount = totalPrice * 0.15;
       document.getElementById("d-price").innerText = discount;
       document.getElementById("g-price").innerText = totalPrice - discount;
+    } else if (couponCode == "COUPLE 20") {
+      const discount = totalPrice * 0.2;
+      document.getElementById("d-price").innerText = discount;
+      document.getElementById("g-price").innerText = totalPrice - discount;
     } else {
       alert("You enter invalid coupon code");
     }
@@ -75,19 +79,6 @@ function grandTotalPrice(status) {
 function updateCart() {}
 // Update Seats
 function updateSeats() {}
-
-// function hideTableRow() {
-//   const discoutnPrice = convertValueById("d-price");
-//   if (discoutnPrice <= 0) {
-//     document.getElementById("hdide-tr").classList.add("hidden");
-//     document.getElementById("hide-tr").classList.add("hidden");
-//     document.querySelector("tr#hide-tr").style.border = "none";
-//     document.querySelector("tr.t-price").style.border = "none";
-//     document.querySelector("tr.t-price").style.border = "none";
-//     document.querySelector("tr.t-price").style.marginBottom = "20px";
-//   }
-// }
-// hideTableRow();
 
 // Convert string to integer value
 function convertValueById(id) {
